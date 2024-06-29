@@ -1,15 +1,10 @@
-variable "ami" {
-  type = map(string)
-  default = {
-    "us-east-1" = "ami-0a640b520696dc6a8"
-  }
+variable "vpc_cidr" {
+    type = string
+  default = "172.23.0.0/16"
 }
-variable "aws_region" {
-  type    = string
-  default = "us-east-1"
+variable "private_sn_count" {
+default = 3
 }
-variable "portNumber"{
-  type=number
-  default = 8080
-  description = "server port number"
+variable "public_sn_count" {
+  default = 3
 }
