@@ -41,6 +41,6 @@ jobs:
       - name: run validate
         uses: terraform-compliance/github_action@0.3.0
         with: 
-          no-failure
+          no-failure:
           
       
