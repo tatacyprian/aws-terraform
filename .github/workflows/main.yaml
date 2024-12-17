@@ -34,3 +34,13 @@ jobs:
         uses: terraform-compliance/github_action@0.3.0
         with: 
          plan: 
+  Deploy:
+    needs: terraplan
+    runs-on: ubuntu-latest
+    steps:
+      - name: run validate
+        uses: terraform-compliance/github_action@0.3.0
+        with: 
+          no-failure
+          
+      
